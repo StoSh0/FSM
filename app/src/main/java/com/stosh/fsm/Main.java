@@ -9,11 +9,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 public class Main extends AppCompatActivity implements View.OnClickListener {
 
     private boolean alarmArmed, allUnlocked, allLocked, driverUnlocked;
+    private Unbinder unbinder;
 
     @BindView(R.id.statusAlarm)
     CheckBox checkBoxAlarmArmed;
@@ -30,7 +33,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        unbinder = ButterKnife.bind(this);
         linearLayoutAllLocked.setSelected(true);
 
         alarmArmed = checkBoxAlarmArmed.isChecked();
@@ -54,8 +57,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
                 }
                 break;
             case R.id.btnUnlock:
-                if (!alarmArmed && allUnlocked) break;
-                if (!alarmArmed && driverUnlocked) break;
                 if (!alarmArmed && allLocked) {
                     allLocked(false);
                     driverUnlocked(true);
@@ -80,17 +81,8 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
                 if (!alarmArmed && allLocked) {
                     alarmArmed(true);
                 }
-                if (alarmArmed && allLocked) {
-                    break;
-                }
                 break;
             case R.id.btnUnlockX2:
-                if (!alarmArmed && allUnlocked) {
-                    break;
-                }
-                if (!alarmArmed && driverUnlocked) {
-                    break;
-                }
                 if (!alarmArmed && allLocked) {
                     allLocked(false);
                     allUnlocked(true);
@@ -117,19 +109,25 @@ public class Main extends AppCompatActivity implements View.OnClickListener {
 
     private void allLocked(boolean value) {
         linearLayoutAllLocked.setSelected(value);
-        doorStatus.setText("All Locked");
+        doorStatus.setText(R.string.all_locked);
         allLocked = value;
     }
 
     private void allUnlocked(boolean value) {
         linearLayoutAllUnlocked.setSelected(value);
-        doorStatus.setText("All Unlocked");
+        doorStatus.setText(R.string.all_unlocked);
         allUnlocked = value;
     }
 
     private void driverUnlocked(boolean value) {
         linearLayoutDriverUnlocked.setSelected(value);
-        doorStatus.setText("Driver Unlocked");
+        doorStatus.setText(R.string.driver_unlocked);
         driverUnlocked = value;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
     }
 }
