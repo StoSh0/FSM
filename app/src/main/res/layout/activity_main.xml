@@ -8,32 +8,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/allUnlocked"
-        android:orientation="horizontal"
-        android:background="@drawable/selector_all_unlocked" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/driverUnlocked"
-        android:orientation="horizontal"
-        android:background="@drawable/selector_driver_unlocked" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/allLocked"
+        android:id="@+id/status"
         android:orientation="vertical"
-        android:background="@drawable/selector_all_locked"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:background="@drawable/all_locked">
 
         <CheckBox
             android:id="@+id/statusAlarm"
             android:layout_width="177dp"
             android:layout_height="wrap_content"
-            android:text="Alarm Armed"
+            android:text="@string/alarm_armed"
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_margin="30dp"
@@ -43,7 +26,7 @@
             android:id="@+id/statusDoor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/all_locked"
             android:layout_gravity="center"
             android:gravity="center"/>
 
@@ -60,7 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="LOCK"
+                android:text="@string/btn_lock"
                 android:textAllCaps="false"/>
 
             <Button
@@ -68,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="UNLOCK"
+                android:text="@string/btn_unlock"
                 android:textAllCaps="false"/>
 
             <Button
@@ -76,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="LOCKx2"
+                android:text="@string/btn_lockX2"
                 android:textAllCaps="false"/>
 
             <Button
@@ -84,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="UNLOCKx2"
+                android:text="@string/btn_unlockX2"
                 android:textAllCaps="false"/>
         </LinearLayout>
     </LinearLayout>

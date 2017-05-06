@@ -3,4 +3,9 @@
     <string name="all_locked">All Locked</string>
     <string name="all_unlocked">All Unlocked</string>
     <string name="driver_unlocked">Driver Unlocked</string>
+    <string name="btn_lock">LOCK</string>
+    <string name="btn_unlock">UnLOCK</string>
+    <string name="btn_lockX2">LOCKx2</string>
+    <string name="btn_unlockX2">UnLOCKx2</string>
+    <string name="alarm_armed">Alarm Armed</string>
 </resources>
