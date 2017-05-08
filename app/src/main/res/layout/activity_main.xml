@@ -20,7 +20,7 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:layout_margin="30dp"
-            android:clickable="false"/>
+            android:clickable="false" />
 
         <TextView
             android:id="@+id/statusDoor"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="@string/all_locked"
             android:layout_gravity="center"
-            android:gravity="center"/>
+            android:gravity="center" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/btn_lock"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btnUnlock"
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/btn_unlock"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btnLockX2"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/btn_lockX2"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btnUnlockX2"
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/btn_unlockX2"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false" />
         </LinearLayout>
     </LinearLayout>
 
