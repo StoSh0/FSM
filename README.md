@@ -1,16 +1,27 @@
 # FSM# FSM
-<h2>Tests Roboelectric and Mockito<h2>
+<h2>
+    Tests Roboelectric and Mockito
+<h2>
 <p>
-I tried to run the test library Roboelectric. And this result=( Error:
+    I tried to run the test library Roboelectric. And this result=( Error:
 </p>
-<img src="http://savepic.ru/13831393.png" border="0" alt="Изображение - savepic.ru — сервис хранения изображений" />
+<img src="http://savepic.ru/13831393.png" border="10" alt="Изображение - savepic.ru — сервис хранения изображений" />
 <p>
-<img src="http://savepic.ru/13854956.png" border="0" alt="Изображение - savepic.ru — сервис хранения изображений" />
+  <img src="http://savepic.ru/13854956.png" border="10" alt="Изображение - savepic.ru — сервис хранения изображений" />
 </p>
 
-<p>I read various tutorial, but it does not solve the problem.
-Maybe it's because I have not worked with such tests</p>
+<p>
+  I read various tutorial, but it does not solve the problem.
+    Maybe it's because I have not worked with such tests
+</p>
 
+<h1>
+  I fixed Exception
+</h1>
+<img src="http://savepic.ru/13889499.png" border="0" alt="Изображение - savepic.ru — сервис хранения изображений" />
+<p> 
+  The problem was in the incorrect configuration setting,  but now I corrected all: <img src="http://savepic.ru/13882331.png"              border="0" alt="Изображение - savepic.ru — сервис хранения изображений" />
+</p>
 
 <h1> UML class : </h1>
 <p> That is my code: 
@@ -45,7 +56,6 @@ AlarmArmed_AllLocked -> AlarmDisarmed_AllUnlocked : UnlockX2
 </p>
 @enduml
 <h6>
-</p>
 
 <h3>Result<h3>
 
